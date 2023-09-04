@@ -11,11 +11,13 @@ const Booking = () => {
   }
   return (
     <div>
-      <h1 className="text-2xl text-center">Online Kalyan Mandap Booking</h1>
+      <h1 className="text-2xl text-center font-bold ">
+        Online Kalyan Mandap Booking
+      </h1>
       <div className="p-5 ">
         <h2 className="text-xl">Fill the below details</h2>
         <form className=" flex flex-col gap-3">
-          <div>
+          <div className="flex col-2 gap-5 gap-3">
             <label for="bookingDate">Booking Date *</label>
             <input
               type="date"
@@ -25,7 +27,7 @@ const Booking = () => {
             ></input>
           </div>
 
-          <div>
+          <div className="flex col-2 gap-5 gap-3">
             <label for="kalyanMandap">Select Kalyan Mandap *</label>
             <select id="kalyanMandap" name="kalyanMandap">
               <option value="--Select--">--Select--</option>
@@ -36,7 +38,7 @@ const Booking = () => {
             </select>
           </div>
 
-          <div>
+          <div className="flex col-2 gap-5 gap-3">
             <label for="purpose">Purpose of Booking *</label>
             <select id="purpose" name="purpose">
               <option value="--Select--">--Select--</option>
@@ -45,11 +47,11 @@ const Booking = () => {
               <option value="Conference">Conference</option>
             </select>
           </div>
-          <div>
+          <div className="flex col-2 gap-5 gap-3">
             <label for="amount">Amount *</label>
             <input type="text" id="amount" name="amount"></input>
           </div>
-          <div>
+          <div className="flex col-2 gap-5 gap-3">
             <label for="bookingType">Select Type *</label>
             <input
               type="radio"
@@ -83,7 +85,7 @@ const Booking = () => {
               placeholder="Enter Father/Husband's Name"
             ></input>
           </div>
-          <div>
+          <div className="flex col-2 gap-5 gap-3">
             <label for="plotNo">Plot No./House No. *</label>
             <input
               type="text"
@@ -101,7 +103,7 @@ const Booking = () => {
             ></input>
           </div>
 
-          <div>
+          <div className="flex col-2 gap-5 gap-3">
             <label for="country">Country *</label>
             <select id="country" name="country">
               <option value="India" selected>
@@ -118,7 +120,7 @@ const Booking = () => {
               <option value="West bengal">West bengal</option>
             </select>
           </div>
-          <div>
+          <div className="flex col-2 gap-5 gap-3">
             <label for="city">City *</label>
             <input
               type="text"
@@ -135,7 +137,7 @@ const Booking = () => {
               placeholder="Enter PIN"
             ></input>
           </div>
-          <div>
+          <div className="flex col-2 gap-5 gap-3">
             <label for="email">Applicant Email ID *</label>
             <input
               type="email"
@@ -152,7 +154,7 @@ const Booking = () => {
               placeholder="Enter mobile Number"
             ></input>
           </div>
-          <div>
+          <div className="flex col-2 gap-5 gap-3">
             <label for="idType">Select ID *</label>
             <select id="idType" name="idType">
               <option value="--Select--">--Select--</option>
@@ -168,30 +170,36 @@ const Booking = () => {
             ></input>
           </div>
 
-          <div>
+          <div className="flex col-2 gap-5 gap-3">
             <label for="idProof">Upload Id Proof *</label>
             <input type="file" id="idProof" name="idProof"></input>
           </div>
           <label for="terms">Read terms & conditions*</label>
 
-          <div>
+          <div className="flex col-2 gap-5 gap-3">
             <input type="checkbox" id="terms" name="terms"></input>
             <label for="terms">
               I undertake to abide by the terms and conditions mentioned
             </label>
           </div>
           <br></br>
-          <input
-            type="submit"
-            className=" border-2 border-black w-[80px]"
-            value="Save and Continue"
-            onClick={(e) => {
-              e.preventDefault();
-              postData({ regId: "Jii" });
-              console.log("Submit reg form here");
-            }}
-          ></input>
-          <input type="reset" value="reset" />
+          <div className="flex  gap-5">
+            <input
+              type="submit"
+              className=" border-2 border-black w-[30%] rounded-md px-2 py-2 bg-yellow-500 text-white font-bold"
+              value="Save and Continue"
+              onClick={(e) => {
+                e.preventDefault();
+                postData({ regId: "Jii" });
+                console.log("Submit reg form here");
+              }}
+            ></input>
+            <input
+              className="border-2 border-black rounded-md w-[20%]"
+              type="reset"
+              value="reset"
+            />
+          </div>
         </form>
       </div>
     </div>

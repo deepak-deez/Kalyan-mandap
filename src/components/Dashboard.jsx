@@ -8,18 +8,21 @@ const Dashboard = () => {
   return (
     <div className=" h-screen mx-5">
       <div className="flex h-100 m-auto justify-center  mt-10 ">
-        <div className="w-[30%] bg-white">
-          <div className="cursor-pointer" onClick={() => setOption("booking")}>
+        <div className="w-[30%] bg-white flex flex-col gap-2 pt-10">
+          <div
+            className="cursor-pointer hover:bg-yellow-500 p-2 bg-slate-400"
+            onClick={() => setOption("booking")}
+          >
             Book Kalyan mandap
           </div>
           <div
-            className="cursor-pointer"
+            className="cursor-pointer hover:bg-yellow-500 p-2 bg-slate-400"
             onClick={() => setOption("checkApplicationStatus")}
           >
             Check Application Status
           </div>
           <div
-            className="cursor-pointer"
+            className="cursor-pointer hover:bg-yellow-500 p-2 bg-slate-400"
             onClick={() => setOption("checkAvailability")}
           >
             Check Availability
